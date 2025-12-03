@@ -14,59 +14,58 @@ function handleClickGetId(event) {
         console.log('Elemento clicado id:', id);
             let button = document.querySelector("#" + id);
             if (button.style.backgroundColor === btColorSel) {
-                    // Desmarca o botão
+                    // Formata o botão como "não selecionado"
                     button.style.color = textColor;
                     button.style.backgroundColor = buttonColor;
                     button.style.fontWeight = "200";
 
+                    // Remove o número do array lastNumber
                     lastNumber.pop(id.split('bt')[1]);
-                    console.log(lastNumber);
-                    let eleH2 = document.querySelector(".lastnumberdisplay");
 
-                    let i = lastNumber.length - 1;
-                    
-                        if (lastNumber[i] <= '15') {
-                            eleH2.textContent = "B" + lastNumber[i];
-                        } else if (lastNumber[i] <= '30') {
-                            eleH2.textContent = "I" + lastNumber[i];
-                        } else if (lastNumber[i] <= '45') {
-                            eleH2.textContent = "N" + lastNumber[i];
-                        } else if (lastNumber[i] <= '60') {
-                            eleH2.textContent = "G" + lastNumber[i];
-                        }  else if (lastNumber[i] <= '75') {
-                            eleH2.textContent = "O" + lastNumber[i];
-                        }else {
-                            eleH2.textContent = "00";
-                        }
+                    // Exibe o último número sorteado no console
+                    console.log(lastNumber);
+
+                    // Exibe o último número sorteado no display
+                    updateLastNumberDisplay();
                 } else {
-                    // Marca o botão
+                    // Formata o botão como "selecionado"
                     button.style.color = txtColorSel;
                     button.style.backgroundColor = btColorSel;
                     button.style.fontWeight = "900";
                     
+                    // Adiciona o número ao array lastNumber
                     lastNumber.push(id.split('bt')[1]);
-                    console.log(lastNumber);
-                    let eleH2 = document.querySelector(".lastnumberdisplay");
 
-                    let i = lastNumber.length - 1;
-                        if (lastNumber[i] <= '15') {
-                            eleH2.textContent = "B" + lastNumber[i];
-                        } else if (lastNumber[i] <= '30') {
-                            eleH2.textContent = "I" + lastNumber[i];
-                        } else if (lastNumber[i] <= '45') {
-                            eleH2.textContent = "N" + lastNumber[i];
-                        } else if (lastNumber[i] <= '60') {
-                            eleH2.textContent = "G" + lastNumber[i];
-                        } else if (lastNumber[i] <= '75') {
-                            eleH2.textContent = "O" + lastNumber[i];
-                        } else {
-                            eleH2.textContent = "00";
-                        }
+                    // Exibe o último número sorteado no console
+                    console.log(lastNumber);
+
+                    // Exibe o último número sorteado no display
+                    updateLastNumberDisplay();
                 }
     } else {
         console.log('Elemento clicado não possui id');
     }
 }
+
+function updateLastNumberDisplay() {
+    // Exibe o último número sorteado no display
+    let eleH2 = document.querySelector(".lastnumberdisplay");
+    let i = lastNumber.length - 1;
+        if (lastNumber[i] <= '15') {
+            eleH2.textContent = "B" + lastNumber[i];
+            } else if (lastNumber[i] <= '30') {
+                eleH2.textContent = "I" + lastNumber[i];
+            } else if (lastNumber[i] <= '45') {
+                eleH2.textContent = "N" + lastNumber[i];
+            } else if (lastNumber[i] <= '60') {
+                eleH2.textContent = "G" + lastNumber[i];
+            }  else if (lastNumber[i] <= '75') {
+                eleH2.textContent = "O" + lastNumber[i];
+            }else {
+                eleH2.textContent = "00";
+            }
+}
+
 
 // Adiciona o listener no documento (funciona para elementos existentes e futuros)
 document.addEventListener('click', handleClickGetId);
