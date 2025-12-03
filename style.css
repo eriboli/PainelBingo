@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Exo 2", sans-serif;
+    --primary-color: #634221; /* Cor primária (azul claro) */
+    --secondary-color: yellow; /* Cor secundária (cinza claro) */
+    --tertiary-color: #897e7c; /* Cor terciária (cinza médio) */
+    --number-color: lightgray; /* Cor terciária (cinza médio) */
+    --bg-color: #fff; /* Cor de fundo (cinza escuro) */
 }
 
 header {
@@ -12,9 +18,9 @@ header {
     width: 100%;
     height: 10rem;
     padding: 1%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--tertiary-color);
     text-align: center;
-    color: #fff;
+    color: var(--bg-color);
     position: absolute;
     top: 0;
     align-items: center;
@@ -43,11 +49,11 @@ header div {
     display: flex;
     font-weight: 900;
     text-transform: uppercase;
-    color: #553f15;
+    color: var(--primary-color);
     font-size: 6rem;
     width: 20%;
     height: 20%;
-    background-color: yellow;
+    background-color: var(--secondary-color);
     border-radius: 1rem;
     margin-left: 2%;
     justify-content: center;
@@ -80,7 +86,7 @@ main {
     /*max-height: 80vh;*/
     /*height: min-content;*/
     height: min-content;
-    background-color: rgba(248, 20, 20, 0);
+    /*background-color: rgba(248, 20, 20, 0);*/
     border-radius: 0.8rem;
     justify-content: center;
     align-items: center;
@@ -94,11 +100,11 @@ main {
     text-align: center;
     font-size: 24px;
     padding: 0.2%;
-    color: white;
-    background-color: #553f15;
+    color: var(--bg-color);
+    background-color: var(--primary-color);
     border-radius: 10px;
-    border: 0px solid rgb(199, 199, 199);
-    color: black;
+    /*border: 0px solid rgb(199, 199, 199);*/
+    color: var(--primary-color);
     max-width: 20%;
     /* height: 100%; */
     height: min-content;
@@ -112,8 +118,8 @@ main {
     padding: 1%;
     font-size: 4rem;
     font-weight: 900;
-    background-color: #553f15;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -129,8 +135,8 @@ main {
     padding: 2%;
     font-size: 3rem;
     font-weight: 200;
-    background-color: #ffffff;
-    color: lightgray;
+    background-color: var(--bg-color);
+    color: var(--number-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -144,8 +150,8 @@ main {
     padding: 2%;
     font-size: 3rem;
     font-weight: 200;
-    background-color: #ffffff;
-    color: lightgray;
+    background-color: var(--bg-color);
+    color: var(--number-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -158,8 +164,8 @@ button {
     display: flex;
     padding: 0.5%;
     font-size: 16px;
-    background-color: #28a745;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -176,10 +182,10 @@ footer {
     width: 100%; /* Largura total */
     height: min-content; /* Altura do rodapé */
     text-align: center; /* Centraliza o texto */
-    color: rgb(255, 255, 255); /* Cor do texto */
+    color: var(--bg-color); /* Cor do texto */
     background-color: gray; /* Cor de fundo */
     padding: 0%; /* Espaçamento interno */
-    border-top: 1px solid #3c4043; /* Borda superior */
+    border-top: 1px solid var(--tertiary-color); /* Borda superior */
     /*font-size: 0.8rem; /* Tamanho da fonte */
     justify-content:center;
 }
@@ -187,14 +193,14 @@ footer {
 .divRodada {
     width: 70%;
     height: min-content;
-    color: white;
-    background-color: rgba(255, 255, 255, 0);
+    color: var(--bg-color);
+    background-color: var(--tertiary-color);
     padding: 0.5%;
 }
 
 .lRodada {
     display: flex;
-    color: rgb(255, 255, 255);
+    color: var(--bg-color);
     font-size: 2rem;
     font-weight: 900;
     justify-content: flex-start;
@@ -205,16 +211,28 @@ select {
     display: flex;
     font-size: 3rem;
     font-weight: 900;
-    padding: 1%;
+    padding: 0.8%;
     width: 100%;
     max-width: 100%;
+    color: var(--primary-color);
     border-radius: 0.5rem;
-    border: 3px solid #ccc;
-    border-color: #553f15;
-    margin-left: 0;
-    background-color: rgb(229, 255, 0);
+    /*border: 3px solid var(--bg-color);
+    border-color: var(--primary-color);
+    margin-left: 0;*/
+    background-color: var(--secondary-color);
     margin-top: 0.5%;
     justify-content: flex-start;
     align-items: center;
 }
 
+select option {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+select option:hover {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+}
