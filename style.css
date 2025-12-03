@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    padding: 1%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+header div {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    /*background-color: #28a745;*/
+    max-width: 80vw;
+    position: relative;
+}
+
+.textHeader {
+    display: flex;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    justify-content: flex-end;
+}
+
+.lastnumberdisplay {
+    display: flex;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #553f15;
+    font-size: 6rem;
+    width: 20%;
+    height: 20%;
+    background-color: yellow;
+    border-radius: 1rem;
+    margin-left: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*min-height: min-content;*/
+    min-height: 100vh;
+}
+main {
+    /*height: calc(100vh - 8rem - 4rem);*/
+    margin: 5rem 0 4rem 0; /* Espaço para o header e footer */
+    height: calc(100vh - 15rem - 4rem); /* Ajuste para considerar o header e footer */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /*background-color: red;*/
+    align-items: center;
+}
+
+.cardcentral {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 80vw;
+    /*max-height: 80vh;*/
+    /*height: min-content;*/
+    height: min-content;
+    background-color: rgba(248, 20, 20, 0);
+    border-radius: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.group {
+    flex: 1;
+    margin: 0.2%;
+    display: flex;
+    text-align: center;
+    font-size: 24px;
+    padding: 0.2%;
+    color: white;
+    background-color: #553f15;
+    border-radius: 10px;
+    border: 0px solid rgb(199, 199, 199);
+    color: black;
+    max-width: 20%;
+    /* height: 100%; */
+    height: min-content;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.columnheader {
+    display: flex;
+    padding: 1%;
+    font-size: 4rem;
+    font-weight: 900;
+    background-color: #553f15;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5%;
+    width: 100%;
+    /*height: 20%;*/
+    height: min-content;
+    justify-content: center;
+}
+
+.numbers {
+    display: flex;
+    padding: 2%;
+    font-size: 3rem;
+    font-weight: 200;
+    background-color: #ffffff;
+    color: lightgray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: min-content;
+    width: 49%;
+    justify-content: center;
+}
+
+.finalnumber {
+    display: flex;
+    padding: 2%;
+    font-size: 3rem;
+    font-weight: 200;
+    background-color: #ffffff;
+    color: lightgray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: min-content;
+    width: 100%;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+    padding: 0.5%;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5%;
+    flex-wrap: wrap;
+    
+}
+
+footer {
+    display: flex;
+    position: absolute; /* Posicionamento absoluto em relação ao elemento pai posicionado */
+    bottom: 0; /* Alinha na parte inferior */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total */
+    height: min-content; /* Altura do rodapé */
+    text-align: center; /* Centraliza o texto */
+    color: rgb(255, 255, 255); /* Cor do texto */
+    background-color: gray; /* Cor de fundo */
+    padding: 0%; /* Espaçamento interno */
+    border-top: 1px solid #3c4043; /* Borda superior */
+    /*font-size: 0.8rem; /* Tamanho da fonte */
+    justify-content:center;
+}
+
+.divRodada {
+    width: 70%;
+    height: min-content;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0.5%;
+}
+
+.lRodada {
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: 900;
+    justify-content: flex-start;
+    text-transform: uppercase;
+}
+
+select {
+    display: flex;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 1%;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    border: 3px solid #ccc;
+    border-color: #553f15;
+    margin-left: 0;
+    background-color: rgb(229, 255, 0);
+    margin-top: 0.5%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
