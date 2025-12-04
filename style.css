@@ -16,7 +16,7 @@
 header {
     display: flex;
     width: 100%;
-    height: 10rem;
+    height: 8vmax;
     padding: 1%;
     background-color: var(--bg-top-bottom);
     text-align: center;
@@ -27,7 +27,7 @@ header {
     justify-content: center;
 }
 
-header div {
+.header {
     display: flex;
     flex: 1;
     justify-content: flex-end;
@@ -38,7 +38,7 @@ header div {
 
 .textHeader {
     display: flex;
-    font-size: 3rem;
+    font-size: 2.5vmax;
     font-weight: 900;
     color: var(--primary-color);
     text-transform: uppercase;
@@ -54,7 +54,7 @@ header div {
     font-weight: 900;
     text-transform: uppercase;
     color: var(--primary-color);
-    font-size: 6rem;
+    font-size: 5vmax;
     width: 20%;
     height: 20%;
     background-color: var(--secondary-color);
@@ -105,7 +105,7 @@ main {
     margin: 0.2%;
     display: flex;
     text-align: center;
-    font-size: 24px;
+    /*font-size: 24px;*/
     padding: 0.2%;
     color: var(--bg-color);
     background-color: var(--primary-color);
@@ -113,7 +113,6 @@ main {
     color: var(--primary-color);
     max-width: 20%;
     height: min-content;
-    height: 70vh;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -121,8 +120,8 @@ main {
 
 .columnheader {
     display: flex;
-    padding: 0.6rem;
-    font-size: 4rem;
+    padding: 0.6vmax;
+    font-size: 3vmax;
     font-weight: 900;
     background-color: var(--primary-color);
     color: var(--bg-color);
@@ -137,23 +136,23 @@ main {
 
 .numbers {
     display: flex;
-    padding: 0.6rem;
-    font-size: 3rem;
+    padding: 0.5vmax;
+    font-size: 2.5vmax;
     font-weight: 200;
     background-color: var(--bg-color);
     color: var(--number-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /*height: min-content;*/
+    height: min-content;
     width: 49%;
     justify-content: center;
 }
 
 .finalnumber {
     display: flex;
-    padding: 0.6rem;
-    font-size: 3rem;
+    padding: 0.5vmax;
+    font-size: 2.5vmax;
     font-weight: 200;
     background-color: var(--bg-color);
     color: var(--number-color);
@@ -202,7 +201,7 @@ footer {
 .lRodada {
     display: flex;
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: 2vmax;
     font-weight: 900;
     justify-content: flex-start;
     text-transform: uppercase;
@@ -210,7 +209,7 @@ footer {
 
 select {
     display: flex;
-    font-size: 3rem;
+    font-size: 2vmax;
     font-weight: 900;
     padding: 0.8%;
     width: 100%;
@@ -233,4 +232,58 @@ select option {
 select option:hover {
     background-color: var(--tertiary-color);
     color: var(--secondary-color);
+}
+
+.headerPatronicio  {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding: 0.5%;
+    height: min-content;
+    /*background-color: tomato;*/
+    color: var(--primary-color);
+    font-weight: 900;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+}
+
+.texto-rolante {
+    animation: marquee 1s linear infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80%;
+    background-color: tomato;
+
+}
+
+@keyframes marquee {
+    from { transform: translatey(100%); }
+    to { transform: translatey(-100%); }
+}
+
+@media (max-width: 360px) {
+    .cardcentral {
+        max-width: 90vw;
+        height: 80vh;
+    }
+    
+    header div {
+    max-width: 90vw;
+    }
+
+    header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 10vmax;
+    padding: 1%;
+    background-color: var(--bg-top-bottom);
+    text-align: center;
+    color: var(--bg-color);
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    }
 }
