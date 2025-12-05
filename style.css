@@ -11,7 +11,7 @@
     --number-color: lightgray; /* Cor quarteária (cinza médio) */
     --bg-color: #fff; /* Cor de fundo (Branco) */
     --bg-top-bottom: #f1f1f1; /* Cor de fundo topo e rodapé (Branco) */
-    --logo-size: 180px;
+    --logo-size: 130px;
 }
 
 header {
@@ -253,15 +253,11 @@ select option:hover {
     flex-wrap: wrap;
     text-transform: uppercase;
 }
-
-
-/* .patrocinio {
-    align-items: center;
-    justify-content: center;
-    width: 90vw;
+.pat_names {
+    columns: 60px 4;
     font-size: 2.5vmax;
-    background-color: rgb(99, 71, 255);
-} */
+    width: 90vw;
+}
 
 .divPatrocinio {
     width: 100vw;
