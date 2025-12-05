@@ -16,7 +16,7 @@
 header {
     display: flex;
     width: 100%;
-    height: 8vmax;
+    height: 9vmax;
     padding: 1%;
     background-color: var(--bg-top-bottom);
     text-align: center;
@@ -32,8 +32,9 @@ header {
     flex: 1;
     justify-content: flex-end;
     align-items: center;
-    max-width: 70vw;
+    max-width: 80vw;
     position: relative;
+    height: 100%;
 }
 
 .textHeader {
@@ -44,7 +45,7 @@ header {
     text-transform: uppercase;
     justify-content: flex-end;
     /*background-color: tomato;*/
-    width: 50%;
+    width: 40%;
     text-align: right;
     line-height: 1;
 }
@@ -54,20 +55,22 @@ header {
     font-weight: 900;
     text-transform: uppercase;
     color: var(--primary-color);
-    font-size: 5vmax;
+    font-size: 5.5vmax;
+    padding: 4%;
     width: 20%;
-    height: 20%;
+    height: 90%;
     background-color: var(--secondary-color);
     border-radius: 1rem;
     margin-left: 2%;
     justify-content: center;
     align-items: center;
+    border: 2px solid var(--primary-color);
 }
 
 .logoheader {
     position: absolute;
     left: 0%;
-    height: 120%;
+    height: 100%;
     width: auto;
     /* background-color: tomato; */
 }
@@ -75,12 +78,12 @@ header {
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    align-items: end;
+    height: 100vh;
 }
 main {
-    margin: 5rem 0 4rem 0;
-    height: calc(100vh - 15rem - 4rem);
+    /*margin: 5rem 0 4rem 0;*/
+    height: calc(100vh - 1rem - 0rem);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -91,8 +94,8 @@ main {
     position: absolute;
     display: flex;
     flex-wrap: nowrap;
-    max-width: 70vw;
-    height: min-content;
+    max-width: 80vw;
+    /*height: min-content;*/
     height: 70vh;
     justify-content: center;
     align-items: center;
@@ -112,15 +115,15 @@ main {
     border-radius: 10px;
     color: var(--primary-color);
     max-width: 20%;
-    height: min-content;
+    height: 70vh;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .columnheader {
     display: flex;
-    padding: 0.6vmax;
+    padding: 0.5vmax;
     font-size: 3vmax;
     font-weight: 900;
     background-color: var(--primary-color);
@@ -137,7 +140,7 @@ main {
 .numbers {
     display: flex;
     padding: 0.5vmax;
-    font-size: 2.5vmax;
+    font-size: 3vmax;
     font-weight: 200;
     background-color: var(--bg-color);
     color: var(--number-color);
@@ -152,12 +155,12 @@ main {
 .finalnumber {
     display: flex;
     padding: 0.5vmax;
-    font-size: 2.5vmax;
+    font-size: 3vmax;
     font-weight: 200;
     background-color: var(--bg-color);
     color: var(--number-color);
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     height: min-content;
     width: 100%;
@@ -220,6 +223,7 @@ select {
     margin-top: 0.5%;
     justify-content: flex-start;
     align-items: center;
+    border: 2px solid var(--primary-color);
 }
 
 select option {
@@ -241,6 +245,7 @@ select option:hover {
     align-items: center;
     padding: 0.5%;
     height: min-content;
+    font-size: 2.5vmax;
     /*background-color: tomato;*/
     color: var(--primary-color);
     font-weight: 900;
@@ -254,6 +259,33 @@ select option:hover {
     white-space: nowrap;
     width: 80%;
     background-color: tomato;
+
+}
+
+.pat_names {
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    font-size: 2.5vmax;
+    columns: 60px 4;
+}
+
+.apoio {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-rows: repeat(auto-fill, 200px);
+    /* justify-content: center;
+    width: 80vw;*/
+    background-color: tomato;
+    justify-content: center;
+    align-items: center;
+}
+
+.apoio img {
+    width: 200px;
 
 }
 
